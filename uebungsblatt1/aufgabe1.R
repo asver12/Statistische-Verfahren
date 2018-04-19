@@ -64,3 +64,31 @@ abline(beta0.seq[228], beta1.seq[78],col=6,lwd=0.2)
 # Var(Y) = 1/n(sum i = 1-> n (Y_1-Ydach_i)^2)
 
 sigma2.hat = min(result2)/76
+
+# Idee Erzeugen von gleichverteilten Zufallsgrößen auf [0,1]
+# linearer Kongruenzgenerator
+# z_0 - Startwert
+# z_i+1 = (a*z_i+b) mod c
+# Erzeugen von Pseudo-Zufallszahlen
+
+set.seed(1)
+runif(10)
+result = runif(10000)
+hist(result)
+hist(result,breaks = seq(0,1,0.1),freq = FALSE)
+
+# Beweis das Gleichverteilung
+# 1. Dichtefunktion
+# f(x)  { 1 x in [0,1]
+#       { 0 sonst
+
+x = seq(0,1,0.01)
+points(x,dunif(x),type="l", col = 2, lwd = 3)
+
+# 2. Verteilungsfunktion
+# F(x)  { 0 x<=0
+#       { x 0<x<=1
+#       { 1 x>0
+# = P(X<=x)
+
+plot(x, punif(x),type = "l", col = 3, lwd = 1)
