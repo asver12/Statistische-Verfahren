@@ -92,3 +92,43 @@ points(x,dunif(x),type="l", col = 2, lwd = 3)
 # = P(X<=x)
 
 plot(x, punif(x),type = "l", col = 3, lwd = 1)
+
+# empirische  Verteilungsfunktion
+
+set.seed(1)
+y = runif(10000)
+plot(ecdf(y))
+points(x, punif(x),type = "l", col = 3, lwd = 1)
+
+y = rnorm(10000)
+hist(y, freq=F)
+
+# Dichtefunktion
+x = seq(-4,4,0.01)
+points(x, dnorm(x),type = "l", col=3)
+
+# empirische Verteilungsfunktion
+plot(ecdf(y))
+points(x, pnorm(x),type = "l", col=4)
+
+#Standardabweichung !NICHT! die Varianz
+y = rnorm(10000, mean = 5, sd = sqrt(0.066))
+hist(y)
+
+beta0 = 4.2227
+beta1 = 0.07
+sigma2 = 0.066
+
+# Pseudozufallszahlen mit unterschiedlichen Erwartungswerten
+# Zurueck Korrigieren
+X = soilrespiration.frame$temp
+muis = beta0+beta1*X
+
+# Standardabweichung ist Wurzel Varianz
+y.sim = rnorm(76, mean = muis, sd=sqrt(sigma2))
+y = log(soilrespiration.frame$resp)
+
+plot(X,y)
+
+points(X, y.sim, pch=16, col = 3)
+
