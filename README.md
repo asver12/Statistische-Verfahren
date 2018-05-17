@@ -8,3 +8,13 @@ Uebung zu Statistischen Verfahren
 - [X] Aufgabe 3
 
 ## Uebung 2
+
+- [X]
+
+## Uebung 3
+
+- [X]
+
+## Uebung 4
+
+- [X]
