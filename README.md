@@ -9,12 +9,19 @@ Uebung zu Statistischen Verfahren
 
 ## Uebung 2
 
-- [X]
+- [X] Alles
 
 ## Uebung 3
 
-- [X]
+- [X] Alles
 
 ## Uebung 4
 
-- [X]
+- [X] Alles
+
+## Uebung 4
+## Uebung 5
+## Uebung 6
+## Uebung 7
+## Uebung 8
+...
