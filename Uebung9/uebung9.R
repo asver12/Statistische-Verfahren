@@ -109,5 +109,5 @@ s_i = 0.07 / 5.6125
 a = 5.6125 / s_i
 
 # scale = mue_i/a
-y.simgamma = rgamma(76, shape= a, scale= means)
+y.simgamma = rgamma(76, shape= a, scale= means / a)
 points(x,y.simgamma, pch = 16, col = 5)
